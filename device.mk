@@ -16,7 +16,7 @@ PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-bliss
+    $(LOCAL_PATH)/overlay-havoc
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -24,20 +24,15 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths_pahu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_pahu.xml \
     $(LOCAL_PATH)/audio/mixer_paths_tavil.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tavil.xml
     
-# Camera
-PRODUCT_PACKAGES += \
-	vendor.lineage.camera.motor@1.0 \
-    vendor.lineage.camera.motor@1.0-service.oneplus_msmnile \
-    OnePlusCameraHelper\
-    android.frameworks.displayservice@1.0 
 
 # Device init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom
 
-# NoCutout
+# Notch hide
 PRODUCT_PACKAGES += \
-    NoCutoutOverlay
+    NoCutoutOverlay \
+    NotchBarKiller
 
 
 # tri-state key
