@@ -41,8 +41,3 @@ PLATFORM_SECURITY_PATCH_OVERRIDE := 2020-01-01
 
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
-
-
-# Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.xtended.maintainer=TheHunter08
